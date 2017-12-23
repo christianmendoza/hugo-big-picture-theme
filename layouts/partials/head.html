@@ -3,6 +3,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="stylesheet" href="assets/css/main.css" />
 
+<!-- Background Styles -->
+{{ if ($.Scratch.Get "panels") }}
+  {{ partial "background-styles" . }}
+{{ end }}
+
 <!-- Google Analytics -->
 {{ if and (.Site.GoogleAnalytics) (not (in (printf "%#v" .Site.BaseURL) "localhost")) }}
   {{ template "_internal/google_analytics.html" . }}

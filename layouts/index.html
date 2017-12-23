@@ -1,3 +1,5 @@
+{{- $.Scratch.Set "panels" (where .Site.RegularPages "Section" "panel") -}}
+
 <!DOCTYPE HTML>
 {{ "<!--" | safeHTML }}
   Big Picture by HTML5 UP
@@ -14,7 +16,7 @@
   {{ partial "header" . }}
 
   <!-- Panels -->
-  {{ range .Site.RegularPages }}
+  {{ range ($.Scratch.Get "panels") }}
     {{ .Render "panel" }}
   {{ end }}
 

@@ -1,0 +1,13 @@
+<style type="text/css">
+{{- range ($.Scratch.Get "panels") }}
+{{- if .Params.backgroundImage }}
+  #{{ .File.TranslationBaseName }} {
+    background: url("assets/css/images/overlay.png"), url("{{ .Params.backgroundImage }}");
+    background-size: 256px 256px, cover;
+    background-attachment: fixed, fixed;
+    background-position: top left, {{ if .Params.backgroundPosition }}{{ .Params.backgroundPosition }}{{ else }}center center{{ end }};
+    background-repeat: repeat, no-repeat;
+  }
+{{ end -}}
+{{ end -}}
+</style>
