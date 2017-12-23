@@ -6,7 +6,7 @@ license = "Creative Commons Attribution 3.0 Unported"
 licenselink = "//github.com/christianmendoza/hugo-big-picture-theme/blob/master/LICENSE.md"
 description = "Big Picture is a simple, single page responsive site template. It features scroll effects, a lightbox-style gallery, and a contact form."
 homepage = "//github.com/christianmendoza/hugo-big-picture-theme"
-tags = []
+tags = ["onepage", "one page", "responsive", "personal"]
 features = []
 min_version = "0.21"
 
