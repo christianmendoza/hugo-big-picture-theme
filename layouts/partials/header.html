@@ -1,10 +1,10 @@
 <header id="header">
   <h1>{{ .Site.Params.header.title }}</h1>
-  <nav>
+  {{ if ($.Scratch.Get "panels") }}<nav>
     <ul>
-      {{ range .Site.RegularPages -}}
+      {{ range ($.Scratch.Get "panels") }}
         <li><a href="#{{ .File.TranslationBaseName }}">{{ .Params.navLabel }}</a></li>
       {{ end }}
     </ul>
-  </nav>
+  </nav>{{ end }}
 </header>

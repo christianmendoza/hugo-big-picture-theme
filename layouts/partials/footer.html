@@ -1,13 +1,13 @@
 <footer id="footer">
 
   <!-- Icons -->
-  {{- if .Site.Params.social -}}
+  {{ if .Site.Params.social }}
     <ul class="actions">
-      {{ range .Site.Params.social -}}
+      {{ range .Site.Params.social }}
         <li><a href="{{ .link }}" class="icon {{ .icon }}"><span class="label">{{ .medium }}</span></a></li>
       {{ end }}
     </ul>
-  {{- end -}}
+  {{ end }}
 
   <!-- Menu -->
   <ul class="menu">
