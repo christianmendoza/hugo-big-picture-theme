@@ -1,0 +1,35 @@
+[[image]]
+  effect = "from-left"
+  full = "images/fulls/01.jpg"
+  thumb = "images/thumbs/01.jpg"
+  caption = "Vestibulum tincidunt gravida"
+
+[[image]]
+  effect = "from-right"
+  full = "images/fulls/02.jpg"
+  thumb = "images/thumbs/02.jpg"
+  caption = "Pellentesque non pretium purus"
+
+[[image]]
+  effect = "from-left"
+  full = "images/fulls/03.jpg"
+  thumb = "images/thumbs/03.jpg"
+  caption = "Donec sem purus"
+
+[[image]]
+  effect = "from-right"
+  full = "images/fulls/04.jpg"
+  thumb = "images/thumbs/04.jpg"
+  caption = "Quisque eleifend blandit"
+
+[[image]]
+  effect = "from-left"
+  full = "images/fulls/05.jpg"
+  thumb = "images/thumbs/05.jpg"
+  caption = "Ullamcorper vel vulputate"
+
+[[image]]
+  effect = "from-right"
+  full = "images/fulls/06.jpg"
+  thumb = "images/thumbs/06.jpg"
+  caption = "Vivamus et tellus"
