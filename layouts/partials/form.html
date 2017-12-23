@@ -1,16 +1,21 @@
 <div class="box">
-  <form method="post" action="#">
+  <form method="post" action="https://formspree.io/{{ .Site.Params.contact.email }}">
     <div class="field half first">
       <input type="text" name="name" placeholder="Name" />
     </div>
     <div class="field half">
-      <input type="email" name="email" placeholder="Email" />
+      <input type="email" name="email" placeholder="Email" name="_replyto" />
     </div>
     <div class="field">
       <textarea name="message" placeholder="Message" rows="6"></textarea>
     </div>
+    <div style="display:none">
+      <input type="text" name="_gotcha">
+      {{ with .Site.Params.contact.subject }}<input type="hidden" name="_subject" value="{{ . }}">{{ end }}
+      {{ if .Site.Params.contact.plainText }}<input type="hidden" name="_format" value="plain">{{ end }}
+    </div>
     <ul class="actions">
-      <li><input type="submit" value="Send Message" /></li>
+      <li><input type="submit" value="{{ .Site.Params.contact.sendBtnText }}" /></li>
     </ul>
   </form>
 </div>
