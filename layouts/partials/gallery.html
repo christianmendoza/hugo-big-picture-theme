@@ -1,0 +1,9 @@
+{{ $images := $.Site.Data.gallery.image }}
+
+<div class="gallery">
+  {{ range $images }}
+    <article class="{{ .effect }}">
+      <a href="{{ .full  }}" class="image fit"><img src="{{ .thumb  }}" title="{{ .caption  }}" alt="{{ .caption  }}" /></a>
+    </article>
+  {{ end }}
+</div>

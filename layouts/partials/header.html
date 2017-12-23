@@ -1,0 +1,10 @@
+<header id="header">
+  <h1>{{ .Site.Params.header.title }}</h1>
+  <nav>
+    <ul>
+      {{ range .Site.RegularPages -}}
+        <li><a href="#{{ .File.TranslationBaseName }}">{{ .Params.navLabel }}</a></li>
+      {{ end }}
+    </ul>
+  </nav>
+</header>

@@ -1,0 +1,17 @@
+<footer id="footer">
+
+  <!-- Icons -->
+  {{- if .Site.Params.social -}}
+    <ul class="actions">
+      {{ range .Site.Params.social -}}
+        <li><a href="{{ .link }}" class="icon {{ .icon }}"><span class="label">{{ .medium }}</span></a></li>
+      {{ end }}
+    </ul>
+  {{- end -}}
+
+  <!-- Menu -->
+  <ul class="menu">
+    <li>{{ .Site.Copyright | safeHTML }}</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+  </ul>
+
+</footer>

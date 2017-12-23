@@ -1,0 +1,29 @@
+<section id="{{ .File.TranslationBaseName }}" class="main {{ .Params.style }}">
+
+  <div class="content {{ if in .Params.style "style2" }}box style2{{ end }}">
+    <header>
+      <h2>{{ .Title }}</h2>
+      {{ with .Description }}<p>{{ . | markdownify }}</p>{{ end }}
+    </header>
+    
+    {{ .Content }}
+
+    <!-- Partial include for gallery, contact form, etc -->
+    {{ if .Params.includePartial }}
+      {{ partial .Params.includePartial . }}
+    {{ end }}
+
+     <!-- More button for intro section -->
+    {{ if and (not .Prev) (.Next) (.Params.showNextBtn) }}
+      <footer>
+        <a href="#{{ .Next.File.TranslationBaseName }}" class="button style2 down">More</a>
+      </footer>
+    {{ end }}
+  </div>
+  
+  <!-- Next button -->
+  {{ if and (.Prev) (.Next) (.Params.showNextBtn) }}
+    <a href="#{{ .Next.File.TranslationBaseName }}" class="button style2 down anchored">Next</a>
+  {{ end }}
+
+</section>
