@@ -3,7 +3,7 @@
 <div class="gallery">
   {{ range $images }}
     <article class="{{ .effect }}">
-      <a href="{{ .full  }}" class="image fit"><img src="{{ .thumb  }}" title="{{ .caption  }}" alt="{{ .caption  }}" /></a>
+      <a href="{{ .full | absURL }}" class="image fit"><img src="{{ .thumb | absURL }}" title="{{ .caption }}" alt="{{ .caption }}" /></a>
     </article>
   {{ end }}
 </div>
